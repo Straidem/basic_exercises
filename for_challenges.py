@@ -1,8 +1,16 @@
 # Задание 1
 # Необходимо вывести имена всех учеников из списка с новой строки
 
+from ast import NamedExpr
+from operator import is_
+from tkinter import N
+
+
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 # ???
+for name in names:
+    print(name)
+
 
 
 # Задание 2
@@ -13,6 +21,9 @@ names = ['Оля', 'Петя', 'Вася', 'Маша']
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 # ???
+for name in names:
+    print(f'{name}: {len(name)}')
+
 
 
 # Задание 3
@@ -26,6 +37,12 @@ is_male = {
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 # ???
+for name in names:
+    if is_male[name] == True:
+        print(f'{name}: мужской')
+    elif is_male[name] == False:
+        print(f'{name}: женский')
+
 
 
 # Задание 4
@@ -42,6 +59,11 @@ groups = [
 ]
 # ???
 
+print(f'Всего {len(groups)} группы') 
+for n, group in enumerate(groups, 1):
+    print(f'Группа {n}: {len(group)} ученика')    
+
+
 
 # Задание 5
 # Для каждой пары учеников нужно с новой строки перечислить учеников, которые в неё входят
@@ -55,3 +77,12 @@ groups = [
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
 # ???
+print('-' * 20)
+delimiter = ', '
+for n, group in enumerate(groups, 1):
+    every_name = delimiter.join(group)
+    print(f'Группа {n}: {every_name}')    
+
+       
+
+    

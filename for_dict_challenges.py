@@ -13,7 +13,11 @@ students = [
     {'first_name': 'Петя'},
 ]
 # ???
-
+for values in students:
+    if students.values() == students.values():
+        print("Два")
+    else:
+        print("Один")
 
 # Задание 2
 # Дан список учеников, нужно вывести самое часто повторящееся имя
